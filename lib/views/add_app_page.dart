@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/core/constants/images_strings.dart';
 
+import '../core/utils/screen_size.dart';
+
 class AddAppPage extends StatelessWidget {
   const AddAppPage({super.key});
 
@@ -54,7 +56,7 @@ class AddAppPage extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 250,
+                height: SizeUtil.heightPercentage(44),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 234, 213),
                   borderRadius: BorderRadius.circular(15),
@@ -66,7 +68,7 @@ class AddAppPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
@@ -75,6 +77,33 @@ class AddAppPage extends StatelessWidget {
                             child: Image.asset(
                               tBookImages,
                               fit: BoxFit.fill,
+                            ),
+                          ),
+                          const Spacer(),
+                          Container(
+                            width: SizeUtil.widthPercentage(2.8),
+                            height: SizeUtil.heightPercentage(1.5),
+                            decoration: BoxDecoration(
+                              color:  Color.fromARGB(199, 243, 211, 143),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          const SizedBox(width: 5),
+                          Container(
+                            width: SizeUtil.widthPercentage(2.8),
+                            height: SizeUtil.heightPercentage(1.5),
+                            decoration: BoxDecoration(
+                              color:  const Color.fromARGB(226, 226, 109, 31),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                           const SizedBox(width: 5),
+                           Container(
+                            width: SizeUtil.widthPercentage(2.8),
+                            height: SizeUtil.heightPercentage(1.5),
+                            decoration: BoxDecoration(
+                              color:  const Color.fromARGB(199, 243, 211, 143),
+                              borderRadius: BorderRadius.circular(30),
                             ),
                           ),
                         ],
@@ -114,7 +143,7 @@ class AddAppPage extends StatelessWidget {
                       const SizedBox(height: 5),
                       Container(
                         width: double.infinity,
-                        height: 40,
+                        height: 35,
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(230, 255, 255, 255),
                           borderRadius: BorderRadius.circular(20),
@@ -125,10 +154,9 @@ class AddAppPage extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               child: Container(
                                 width: 120,
-                                height: 40,
+                                height: 35,
                                 decoration: BoxDecoration(
-                                  color:
-                                      const Color.fromARGB(255, 96, 187, 116),
+                                  color: const Color.fromARGB(235, 39, 119, 74),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Padding(
@@ -139,17 +167,17 @@ class AddAppPage extends StatelessWidget {
                                       Image.asset(
                                         tLinkLogo,
                                         width: 23,
-                                        height: 23,
+                                        height: 16,
                                         color: Colors.white,
                                       ),
-                                      const SizedBox(width: 5),
+                                      const SizedBox(width: 2),
                                       const Padding(
                                         padding: EdgeInsets.only(top: 5.0),
                                         child: Text(
                                           "5 app",
                                           style: TextStyle(
                                             fontFamily: 'Rotunda',
-                                            fontSize: 17,
+                                            fontSize: 14,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -183,8 +211,8 @@ class AddAppPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: 166,
-                        height: 165,
+                        width: SizeUtil.widthPercentage(41.66),
+                        height: SizeUtil.heightPercentage(25.5),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -212,24 +240,24 @@ class AddAppPage extends StatelessWidget {
                                 "Google calendar",
                                 style: TextStyle(
                                   fontFamily: 'Rotunda',
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               const SizedBox(height: 5),
                               Container(
-                                width: 150,
+                                width: SizeUtil.widthPercentage(34),
                                 height: 33,
                                 decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 29, 41, 57),
-                                    borderRadius: BorderRadius.circular(20)),
+                                  color: const Color.fromARGB(255, 29, 41, 57),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                                 child: const Center(
                                   child: Text(
                                     "Add",
                                     style: TextStyle(
                                       fontFamily: 'Rotunda',
-                                      fontSize: 16,
+                                      fontSize: 15,
                                       color: Colors.white,
                                     ),
                                   ),
@@ -241,8 +269,8 @@ class AddAppPage extends StatelessWidget {
                       ),
                       const SizedBox(width: 10),
                       Container(
-                        width: 166,
-                        height: 165,
+                        width: SizeUtil.widthPercentage(41.66),
+                        height: SizeUtil.heightPercentage(25.5),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -267,28 +295,54 @@ class AddAppPage extends StatelessWidget {
                               ),
                               const SizedBox(height: 10),
                               const Text(
-                                "Google Meet",
+                                "Google meet",
                                 style: TextStyle(
                                   fontFamily: 'Rotunda',
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               const SizedBox(height: 5),
                               Container(
-                                width: 150,
+                                width: SizeUtil.widthPercentage(34),
                                 height: 33,
                                 decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 208, 212, 221),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: const Center(
-                                  child: Text(
-                                    "Add",
-                                    style: TextStyle(
-                                      fontFamily: 'Rotunda',
-                                      fontSize: 16,
-                                      color: Colors.white,
+                                  color:
+                                      const Color.fromARGB(255, 208, 212, 221),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 15,
+                                          height: 15,
+                                          decoration: BoxDecoration(
+                                            color: const Color.fromARGB(
+                                                235, 39, 119, 74),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: const Icon(
+                                            Icons.check,
+                                            color: Colors.white,
+                                            size: 13,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        const Text(
+                                          "Connected",
+                                          style: TextStyle(
+                                            fontFamily: 'Rotunda',
+                                            fontSize: 14,
+                                            color:
+                                                Color.fromARGB(255, 39, 39, 39),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -304,8 +358,8 @@ class AddAppPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: 166,
-                        height: 165,
+                        width: SizeUtil.widthPercentage(41.66),
+                        height: SizeUtil.heightPercentage(25.5),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -333,25 +387,51 @@ class AddAppPage extends StatelessWidget {
                                 "Notion",
                                 style: TextStyle(
                                   fontFamily: 'Rotunda',
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               const SizedBox(height: 5),
                               Container(
-                                width: 150,
-                                height: 33,
+                                width: SizeUtil.widthPercentage(34),
+                                height: 35,
                                 decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 208, 212, 221),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: const Center(
-                                  child: Text(
-                                    "Add",
-                                    style: TextStyle(
-                                      fontFamily: 'Rotunda',
-                                      fontSize: 16,
-                                      color: Colors.white,
+                                  color:
+                                      const Color.fromARGB(255, 208, 212, 221),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 15,
+                                          height: 15,
+                                          decoration: BoxDecoration(
+                                            color: const Color.fromARGB(
+                                                235, 39, 119, 74),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: const Icon(
+                                            Icons.check,
+                                            color: Colors.white,
+                                            size: 13,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        const Text(
+                                          "Connected",
+                                          style: TextStyle(
+                                            fontFamily: 'Rotunda',
+                                            fontSize: 14,
+                                            color:
+                                                Color.fromARGB(255, 39, 39, 39),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -362,8 +442,8 @@ class AddAppPage extends StatelessWidget {
                       ),
                       const SizedBox(width: 10),
                       Container(
-                        width: 166,
-                        height: 165,
+                        width: SizeUtil.widthPercentage(41.66),
+                        height: SizeUtil.heightPercentage(25.5),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -387,25 +467,53 @@ class AddAppPage extends StatelessWidget {
                                 "Gitlab",
                                 style: TextStyle(
                                   fontFamily: 'Rotunda',
-                                  fontSize: 17,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               const SizedBox(height: 5),
                               Container(
-                                width: 150,
-                                height: 33,
+                                width: SizeUtil.widthPercentage(34),
+                                height: 35,
                                 decoration: BoxDecoration(
-                                    color: const Color.fromARGB(
-                                        255, 208, 212, 221),
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: const Center(
-                                  child: Text(
-                                    "Add",
-                                    style: TextStyle(
-                                      fontFamily: 'Rotunda',
-                                      fontSize: 16,
-                                      color: Colors.white,
+                                  color:
+                                      const Color.fromARGB(255, 208, 212, 221),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                                    child: Row(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Container(
+                                          width: 15,
+                                          height: 15,
+                                          decoration: BoxDecoration(
+                                            color: const Color.fromARGB(
+                                                235, 39, 119, 74),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: const Icon(
+                                            Icons.check,
+                                            color: Colors.white,
+                                            size: 13,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 5),
+                                            const Text(
+                                              "Connected",
+                                              style: TextStyle(
+                                                fontFamily: 'Rotunda',
+                                                fontSize: 14,
+                                                color: Color.fromARGB(255, 39, 39, 39),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),

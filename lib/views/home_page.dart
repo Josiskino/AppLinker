@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:myapp/core/constants/images_strings.dart';
 import 'package:myapp/views/add_app_page.dart';
 
+import '../core/utils/screen_size.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Initialize screen size
+    SizeUtil.init(context);
+
     return Scaffold(
       appBar: AppBar(
         leading: Container(
@@ -103,8 +108,8 @@ class HomePage extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    width: 230,
-                    height: 300,
+                    width: SizeUtil.widthPercentage(55),
+                    height: SizeUtil.heightPercentage(47.6),
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 243, 244, 248),
                       borderRadius: BorderRadius.circular(15),
@@ -133,9 +138,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            height: 10,
-                          ),
+                          const SizedBox(height: 10),
                           SizedBox(
                             height: 45,
                             width: 200,
@@ -303,12 +306,26 @@ class HomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: const Center(
-                              child: Text(
-                                'Schudule a meeting',
-                                style: TextStyle(
-                                  fontFamily: 'Rotunda',
-                                  fontSize: 13,
-                                  color: Colors.white,
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(
+                                  children: [
+                                    //const Spacer(),
+                                    Icon(
+                                      Icons.edit_calendar_outlined,
+                                      color: Colors.white,
+                                      size: 15.5,
+                                    ),
+                                    SizedBox(width: 5),
+                                    Text(
+                                      'Schudule a meeting',
+                                      style: TextStyle(
+                                        fontFamily: 'Rotunda',
+                                        fontSize: 12.5,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -321,8 +338,8 @@ class HomePage extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        width: 120,
-                        height: 145,
+                        width: SizeUtil.widthPercentage(33.8),
+                        height: SizeUtil.heightPercentage(23),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -388,8 +405,8 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       Container(
-                        width: 120,
-                        height: 145,
+                        width: SizeUtil.widthPercentage(33.8),
+                        height: SizeUtil.heightPercentage(23),
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 243, 244, 248),
                           borderRadius: BorderRadius.circular(15),
@@ -435,8 +452,7 @@ class HomePage extends StatelessWidget {
                               width: 100,
                               height: 25,
                               decoration: BoxDecoration(
-                                color: const Color.fromARGB(
-                                        255, 208, 212, 221),
+                                color: const Color.fromARGB(255, 208, 212, 221),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: const Center(
@@ -460,7 +476,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 10),
               Container(
                 width: double.infinity,
-                height: 400,
+                height: SizeUtil.heightPercentage(50),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 243, 244, 248),
                   borderRadius: BorderRadius.circular(15),
@@ -486,7 +502,7 @@ class HomePage extends StatelessWidget {
                             width: 100,
                             height: 25,
                             decoration: BoxDecoration(
-                              color: const Color.fromARGB(235, 107, 187, 141),
+                              color: const Color.fromARGB(235, 39, 119, 74),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Padding(
@@ -507,7 +523,7 @@ class HomePage extends StatelessWidget {
                                     Image.asset(
                                       tLinkLogo,
                                       width: 18,
-                                      height: 18,
+                                      height: 15,
                                       color: Colors.white,
                                     ),
                                   ],
@@ -552,6 +568,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
